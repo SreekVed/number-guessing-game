@@ -5,7 +5,6 @@ public class GuessingGame {
     private Scanner reader;
 
     public GuessingGame() {
-        // use only this scanner, othervise the tests do not work
         this.reader = new Scanner(System.in);
     }
 
@@ -23,7 +22,6 @@ public class GuessingGame {
 
     }
 
-    // implement here the methods isGreaterThan and average
 
     public void instructions(int lowerLimit, int upperLimit) {
         int maxQuestions = howManyTimesHalvable(upperLimit - lowerLimit);
@@ -36,11 +34,8 @@ public class GuessingGame {
         System.out.println("");
     }
 
-    // a helper method:
     public static int howManyTimesHalvable(int number) {
-        // we create a base two logarithm  of the given value
 
-        // Below we swap the base number to base two logarithms!
         return (int) (Math.log(number) / Math.log(2)) + 1;
     }
     
